@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block page_content %}
+<div class="header-block">
+    <div class="header-block-content">
+        <div class="container">
+            <h1 class="header-block-heading mb-0">London Underground Planner</h1>
+            <h2 class="header-block-subheading mb-0">Find the shortest path for your requested route.</h2>
+        </div>
+    </div>
+</div>
+
+<div class="homepage-selection">
+    <div class="container">
+        <!-- Header Section -->
+        <img src="{% static 'imgs/homepage-graphic.svg' %}" />
+        <div class="selection-box">
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="selection-title from-title">From</p>
+                    <input type="text" name="origin-location" id="origin-location" placeholder="Origin Location" style="width: 100%;" />
+                </div>
+                <div class="col-lg-3">
+                    <p class="selection-title to-title">To</p>
+                    <input type="text" name="destination-location" id="destination-location" placeholder="Destination Location" style="width: 100%;" />
+                </div>
+                <div class="col-lg-2">
+                    <p class="selection-title at-title">At</p>
+                    <input type="time" name="start-time" id="start-time" onchange="time_set()" />
+                </div>
+                <div class="col-lg-2 search-train-graphic-box">
+                    <img src="{% static 'imgs/train-graphic.svg' %}" id="train-graphic" />
+                </div>
+                <div class="col-lg-2 selection-button">
+                    <button id="selection-submit-button">Search</button>
+                </div>
+            </div>
+            <!-- Dropdown route section. -->
+            <div class="route-selection">
+                <hr>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <!-- Route Plan Table -->
+                        <div class="route-plan">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" width="35%">Station</th>
+                                        <th scope="col" width="35%">Line</th>
+                                        <th scope="col">Total Travel Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="route-table">
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Route Summary Notes -->
+
+                        <div class="route-summary">
+                            <div class="summary-heading">
+                                <p>Journey Summary</p>
+                            </div>
+                            <ol id="summary-block">
+                            </ol>
+                            <p><strong>Total Travel Time:</strong> <span id="total-travel-time"></span> Minutes</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <!-- Route Map -->
+                        <div class="route-map">
+                            <div id="map-object"></div>
+                        </div>
+                        <div class="algorithm-timings">
+                            <p>Dijkstra Route Calculation (Seconds): <span id="dijkstra"></span></p>
+                            <p>Route Structure Formatting (Seconds): <span id="structure"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Content Block-->
+<div class="content-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 id="text-overlay-upper">Advanced Route Visualisation.</h1>
+                <div id="direction-feature-greyscale">
+                    <img src="{% static 'imgs/greyscale-direction.svg' %}" />
+                </div>
+            </div>
+            <div class="col-lg-6 text-col">
+                <div id="content-text-upper">
+                    <p>
+                        We use advanced route visualisation <br>so that you can see your chosen <br>
+                        route more clearly. Using either the map<br>
+                        or the detailed linear view of the stations on your route!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 id="text-overlay-lower">Shortest Path Finding.</h1>
+                <div id="direction-feature-colour">
+                    <img src="{% static 'imgs/route-graphic.svg' %}" />
+                </div>
+            </div>
+            <div class="col-lg-6 text-col">
+                <div id="content-text-lower">
+                    <p>
+                        In a rush? Well don't worry, <br>this application uses Dijkstra's algorithm <br>to find you the shortest possible<br>
+                        route to your chosen destination!<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="error-message" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Whoops! That doesn't look quite right.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger" id="error-message-content"></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2JJaU3ySjHvqyO7a_HGNf3-pS0dZBjo4&v=weekly" defer></script>
+<script src="{% static 'js/typeahead.bundle.min.js' %}"></script>
+<script src="{% static 'js/route-planner.js' %}"></script>
+{% endblock %}

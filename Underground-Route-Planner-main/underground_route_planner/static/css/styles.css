@@ -1,0 +1,545 @@
+/* 
+-------------------------------------------------
+-------------     Global Styles     -------------
+-------------------------------------------------
+*/
+
+:root {
+    --primary-black: #2D3039;
+    --secondary-black: #747780;
+    --primary-blue: #113B92;
+    --secondary-blue: #0060a8;
+    --off-white: #EBEBEB;
+    /* Underground Colour Codes */
+    --bakerloo-line: #b26300;
+    --central-line: #DC241F;
+    --circle-line: #FFD329;
+    --district-line: #007D32;
+    --hsmith-line: #F4A9BE;
+    --jubilee-line: #A1A5A7;
+    --metropolitan-line: #9B0058;
+    --northern-line: #000;
+    --piccadilly-line: #0019A8;
+    --victoria-line: #0098D8;
+    --waterloo-line: #93CEBA;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    max-width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* 
+-------------------------------------------------
+-------------     Navbar Styles     -------------
+-------------------------------------------------
+*/
+
+.navbar-custom {
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
+}
+
+.navbar-custom .navbar-brand {
+    color: var(--primary-black);
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 45px;
+    margin-left: -25px;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: var(--secondary-black)
+}
+
+.navbar-custom .navbar-collapse {
+    margin-right: -24px;
+}
+
+.navbar-custom .navbar-nav .nav-item {
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+.navbar-custom .navbar-nav .nav-item .nav-link {
+    color: var(--primary-black);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.navbar-custom .navbar-nav .nav-item .nav-link:hover {
+    color: var(--secondary-black);
+}
+
+/* 
+-------------------------------------------------
+-------------     Header Styles     -------------
+-------------------------------------------------
+*/
+
+.header-block {
+    margin-top: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.subpage-header-block {
+    margin-top: 90px;
+}
+
+.header-block .header-block-content {
+    position: relative;
+    z-index: 1;
+}
+
+.header-block .header-block-content .header-block-heading {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+.header-block .header-block-content .header-block-subheading, .header-block .header-block-content .subpage-block-subheading {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.header-block .header-block-content .subpage-block-heading {
+    padding-top: 60px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+/* 
+-------------------------------------------------
+-------------  Selection Box Styles -------------
+-------------------------------------------------
+*/
+
+.homepage-selection {
+    margin-top: -100px;
+    text-align: right;
+}
+
+.homepage-selection svg {
+    position: relative;
+    z-index: 1;
+}
+
+.homepage-selection .selection-box {
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    height: 90px;
+    margin-top: -125px;
+    padding: 25px;
+    position: relative;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    z-index: 2;
+}
+
+.homepage-selection .selection-box-large {
+    height: auto !important;
+    min-height: 500px;
+    overflow-y: auto;
+}
+
+.homepage-selection .selection-box .selection-title {
+    color: var(--secondary-black);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+
+.homepage-selection input {
+    border: none;
+    outline: none;
+    color: var(--primary-black);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.homepage-selection .invalid-selection::placeholder {
+    color: #dc3545;
+}
+
+.homepage-selection #train-graphic {
+    margin-top: -42px;
+    margin-left: 2px;
+}
+
+.homepage-selection .selection-button {
+    text-align: right;
+}
+
+.homepage-selection .selection-button #selection-submit-button {
+    background: var(--primary-blue);
+    border-radius: 10px;
+    border: 0;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    height: 54px;
+    line-height: 20px;
+    margin-top: -5px;
+    outline: none;
+    width: 116px;
+    transition: all 0.06s ease-in-out;
+}
+
+.homepage-selection .selection-button #selection-submit-button:hover {
+    background: var(--secondary-blue);
+}
+
+.homepage-selection .selection-box .search-train-graphic-box {
+    overflow: hidden;
+    margin-top: -25px;
+    padding-top: 28px;
+}
+
+/* 
+-------------------------------------------------
+-------------    Typeahead Styles   -------------
+-------------------------------------------------
+*/
+
+.tt-menu {
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: -20px;
+    width: 100%;
+    z-index: 105 !important;
+    background: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 25px;
+}
+
+.tt-menu .results-found {
+    color: var(--primary-blue)
+}
+
+.tt-menu .no-results-found {
+    color: #DC241F;
+    font-weight: 700;
+}
+
+.tt-menu .empty-message {
+    margin-bottom: 5px;
+}
+
+.tt-menu .tt-suggestion {
+    margin-bottom: 5px;
+}
+
+.tt-menu .tt-suggestion:hover {
+    cursor: pointer;
+    color: var(--secondary-black);
+}
+
+.tt-menu .tt-dataset {
+    margin-bottom: -10px;
+}
+
+.selection-box .twitter-typeahead {
+    width: 100%;
+}
+
+.modal-content {
+    border: 0;
+    border-radius: 20px;
+    padding: 20px 20px 0px 20px;
+}
+
+/* 
+-------------------------------------------------
+-------------       Route Box       -------------
+-------------------------------------------------
+*/
+
+.route-selection {
+    display: none;
+}
+
+.route-selection hr {
+    color: var(--off-white);
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.route-selection .route-plan {
+    display: inline;
+    width: 75%;
+}
+
+.route-selection .route-plan table {
+    margin-bottom: 0;
+}
+
+.route-selection .route-plan th {
+    border-top: none;
+    border-bottom: none;
+    color: var(--secondary-black);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 0px 0px 20px 0px;
+}
+
+.route-selection .route-plan td {
+    border-top: none;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 0px 0px 20px 0px;
+}
+
+.route-selection .route-map {
+    display: inline;
+    width: 25%;
+}
+
+.route-selection .route-map #map-object {
+    width: 100%;
+    height: 470px;
+    border-radius: 10px;
+}
+
+.route-summary {
+    margin-top: 25px;
+}
+
+.route-summary .summary-heading {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--off-white);
+}
+
+.route-summary .summary-heading p {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    padding: 0 15px 0 0;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: var(--secondary-black);
+    background: #fff;
+}
+
+.route-summary ol {
+    padding-left: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.route-summary li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.algorithm-timings {
+    margin-top: 10px;
+}
+
+.algorithm-timings p {
+    margin-bottom: 0;
+    color: var(--secondary-black);
+    font-size: 13px;
+}
+
+/* 
+-----------------------------------------------------
+-------------    Homepage Content       -------------
+-----------------------------------------------------
+*/
+
+#direction-feature-greyscale {
+    margin-top: -35px;
+    margin-left: -55px;
+}
+
+#text-overlay-upper {
+    position: absolute;
+    font-weight: 600;
+    margin-top: 185px;
+    margin-left: 25px;
+}
+
+#direction-feature-colour {
+    margin-left: 200px;
+}
+
+#text-overlay-lower {
+    z-index: 100;
+    font-weight: 600;
+    position: absolute;
+    margin-left: 35px;
+}
+
+.text-col {
+    text-align: right;
+}
+
+#content-text-lower {
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+#content-text-upper {
+    margin-top: 200px;
+    margin-right: 50px
+}
+
+/* 
+-------------------------------------------------
+-------------     License Page      -------------
+-------------------------------------------------
+*/
+
+.license-list {
+    margin-top: 75px;
+}
+
+.license-list .row {
+    margin-bottom: 25px
+}
+
+/* 
+--------------------------------------------------
+---------------- User Guide Pages ----------------
+--------------------------------------------------
+*/
+
+.user-guide-section {
+    margin-bottom: 100px;
+}
+
+.user-guide-description {
+    margin-top: 30px;
+}
+
+/* 
+--------------------------------------------------
+-------------- Mobile Optimisations --------------
+--------------------------------------------------
+*/
+
+@media (max-width: 992px) {
+    .navbar-custom .navbar-brand {
+        margin-left: 0;
+    }
+    .homepage-selection .selection-box {
+        height: 455px;
+        text-align: center;
+    }
+    .homepage-selection .selection-box input {
+        margin: 10px 0 30px 0;
+        text-align: center;
+        height: 50px;
+        border: 1px solid var(--off-white);
+        border-radius: 20px;
+        width: 100%;
+    }
+    .homepage-selection .selection-box .twitter-typeahead {
+        width: 100%;
+    }
+    .homepage-selection .selection-box .search-train-graphic-box {
+        display: none;
+    }
+    .homepage-selection .selection-button #selection-submit-button {
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .homepage-selection {
+        margin-top: 20px;
+    }
+    #content-text-upper {
+        margin-bottom: 150px;
+    }
+    #content-text-upper, #content-text-lower {
+        margin-top: -100px;
+    }
+    .text-col {
+        text-align: left;
+    }
+    #direction-feature-colour {
+        margin-left: 0;
+    }
+    .user-guide-description img {
+        margin-top: 25px;
+    }
+    .tt-menu {
+        margin-top: -10px;
+        margin-left: 0;
+    }
+}
+
+/* 
+-------------------------------------------------
+---------- Official Underground Colors ----------
+-------------------------------------------------
+*/
+
+.bakerloo {
+    color: var(--bakerloo-line);
+}
+
+.central {
+    color: var(--central-line);
+}
+
+.circle {
+    color: var(--circle-line);
+}
+
+.district {
+    color: var(--district-line);
+}
+
+.hsmith {
+    color: var(--hsmith-line);
+}
+
+.jubilee {
+    color: var(--jubilee-line);
+}
+
+.metropolitan {
+    color: var(--metropolitan-line);
+}
+
+.northern {
+    color: var(--northern-line);
+}
+
+.piccadilly {
+    color: var(--piccadilly-line);
+}
+
+.victoria {
+    color: var(--victoria-line);
+}
+
+.waterloo {
+    color: var(--waterloo-line);
+}

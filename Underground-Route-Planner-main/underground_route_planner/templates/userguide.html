@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block page_content %}
+<div class="header-block subpage-header-block">
+    <div class="header-block-content">
+        <div class="container">
+            <h1 class="subpage-block-heading mb-0">User Guide</h1>
+            <h2 class="subpage-block-subheading mb-0">How to use the London Underground Planner</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="user-guide-section">
+        <!-- User Guide Title-->
+        <div class="user-guide-description">
+            <p>Selecting Your Route In Four Easy Steps!</p>
+            <ol>
+                <li>Firstly, enter your origin location.</li>
+                <li>Next, enter your desired destination.</li>
+                <li>Similarly, enter the time you wish to depart.</li>
+                <li>Lastly, click the search button.</li>
+            </ol>
+        </div>
+    </div>
+    <!-- User Guide Steps Grid  -->
+    <div class="user-guide-section">
+        <!-- Step 1-->
+        <h1 class="user-guide-steps-heading mb-0">Step 1.</h1>
+        <h2 class="user-guide-steps-subheading mb-0">Selecting Your Origin</h2>
+        <div class="user-guide-description">
+            <div class="row">
+                <div class="col-lg-5">
+                    <p>Begin by entering your origin station; the name of the underground station that you wish to begin your route. You can do so by filling out the "From" input box.</p>
+                    <p>Once you start typing, a list of suggested stations will appear; you can click one of these to automatically complete the station name. Alternatively, press "TAB" or "Enter" to auto fill the suggestion.</p>
+                    <p>If your desired station isn't recommended, you can continue typing the full station name until it appears.</p>
+                </div>
+                <div class="col-lg-4 offset-lg-3">
+                    <img src="{% static 'imgs/from-box.svg' %}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user-guide-section">
+        <!-- Step 2 -->
+        <h1 class="user-guide-steps-heading mb-0">Step 2.</h1>
+        <h2 class="user-guide-steps-subheading mb-0">Selecting Your Destination</h2>
+        <div class="user-guide-description">
+            <div class="row">
+                <div class="col-lg-5">
+                    <p>Next, please enter your destination station; the name of the underground station that you wish to end your route at. You can do so by filling out the "To" input box.</p>
+                    <p>Once you start typing, a list of suggested stations will appear; you can click one of these to auto input it into the field. Alternatively, press "TAB" or "Enter" to auto fill the suggestion.</p>
+                    <p>If your desired station isn't recommended, you can continue typing the full station name until it appears.</p>
+                </div>
+                <div class="col-lg-4 offset-lg-3">
+                    <img src="{% static 'imgs/to-box.svg' %}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user-guide-section">
+        <!-- Step 3 -->
+        <h1 class="user-guide-steps-heading mb-0">Step 3.</h1>
+        <h2 class="user-guide-steps-subheading mb-0">Selecting Your Departure Time</h2>
+        <div class="user-guide-description">
+            <div class="row">
+                <div class="col-lg-5">
+                    <p>Enter your desired departure time into the "At" input box. It is important to specify the time of departure because the Bakerloo Line trains will be traveling between stations at twice the speed from 9am-4pm and from <br>7pm-Midnight as part of a new infrastructure rollout to help you get to your destination as quickly as possible!</p>
+                    <p style="color: #e21717"><b>Please Note:</b> Due to the current <b>Covid-19 restrictions</b>, the night tube will be suspended for the forseeable future. Our current operating hours are 05:00 until 00:00 daily; please make sure you can complete your journey within these times!</p>
+                </div>
+                <div class="col-lg-4 offset-lg-3">
+                    <img src="{% static 'imgs/at-box.svg' %}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user-guide-section">
+        <!-- Step 4 -->
+        <h1 class="user-guide-steps-heading mb-0">Step 4.</h1>
+        <h2 class="user-guide-steps-subheading mb-0">Searching For Your Route</h2>
+        <div class="user-guide-description">
+            <div class="row">
+                <div class="col-lg-5">
+                    <p>Finally, click search. It really is that simple!</p>
+                </div>
+                <div class="col-lg-4 offset-lg-3">
+                    <img src="{% static 'imgs/search-button.svg' %}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
