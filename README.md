@@ -132,4 +132,3 @@ Future Enhancements
  Integration with other London transport modes
 
 
-Note: This application is for educational/personal use. For official London Underground information, please visit tfl.gov.uk.
