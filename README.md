@@ -18,7 +18,7 @@ Journey Details: Display comprehensive journey information including:
 Total travel time
 Number of stops
 Line changes required
-Step-by-step directions
+Step-by-step directions.
 
 
 
