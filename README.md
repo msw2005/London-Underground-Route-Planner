@@ -113,7 +113,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Transport for London (TfL) for providing public transport data
 London Underground map and station information
-Open source community for algorithmic implementations
+Open source community for algorithmic implementations.
 
 Support
 If you encounter any issues or have questions:
