@@ -1,5 +1,5 @@
 London Underground Route Planner
-A comprehensive route planning application for the London Underground transport system, helping users find the optimal paths between stations across the entire tube network.
+A comprehensive route planning application for the London Underground transport system, helping users find the optimal paths between stations across the entire tube network;
 
 Features
 
