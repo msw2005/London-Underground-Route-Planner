@@ -3,7 +3,7 @@ import sys
 from django.core.wsgi import get_wsgi_application
 from django.contrib.staticfiles.handlers import StaticFilesHandler
 
-# Import paths to allow script to include other folders.
+# Import paths to allow script to include other folders..
 sys.path.insert(
     0,
     os.path.abspath(
