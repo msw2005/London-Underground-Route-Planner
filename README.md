@@ -11,7 +11,8 @@ Jubilee, Metropolitan, Northern, Piccadilly
 Victoria, Waterloo & City, Bakerloo, DLR
 
 
-Real-time Calculations: Dynamic route optimization based on current network status
+
+Real-time Calculations: Dynamic route optimization based on current network status,
 Station Search: Easy-to-use station lookup and selection
 Journey Details: Display comprehensive journey information including:
 
