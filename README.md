@@ -124,7 +124,7 @@ Check the Issues page
 Create a new issue with detailed information
 Contact the maintainer at [your-email]
 
-Future Enhancements
+Future Enhancements:
 
 
  Real-time delay integration
