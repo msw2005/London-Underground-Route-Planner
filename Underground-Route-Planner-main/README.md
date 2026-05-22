@@ -11,7 +11,7 @@ Basic project features include
 - Route Speed Factors & Operating Times
 - Simplistic Application Configuration
 - Station Geolocational Geocoding & Route Visualisation
-- Lightweight Django Web Interface
+- Lightweight Django Web Interface.
 
 ## Getting Started
 ### Self-Setup and Installation
